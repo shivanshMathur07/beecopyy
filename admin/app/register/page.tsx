@@ -40,7 +40,7 @@ export default function RegisterPage() {
 
     try {
       await register(formData);
-      router.push('/dashboard');
+      router.push('/admin/dashboard');
     } catch (error) {
       setError('An error occurred during registration');
     } finally {
