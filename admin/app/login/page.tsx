@@ -32,7 +32,7 @@ export default function LoginPage() {
     try {
       let loginData = await authService.login(credentials);
       if (loginData.success) {
-        return router.push('/dashboard');
+        return router.push('/admin/dashboard');
       }
     } catch (err: any) {
       setError(err.message || 'Login failed');
@@ -80,7 +80,7 @@ export default function LoginPage() {
 
         <div className="text-center mt-4">
           <Link
-            href="/register"
+            href="/admin/register"
             className="text-sm text-blue-600 hover:text-blue-800"
           >
             Need an admin account? Register
