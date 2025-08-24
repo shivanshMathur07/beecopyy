@@ -64,7 +64,10 @@ const allowedOrigins = [process.env.ADMIN_PANEL_URL, process.env.FRONTEND_URL];
 //   },
 //   credentials: true, // Allow cookies and credentials
 // }));
-app.use(cors());
+app.use(cors({
+  origin: allowedOrigins,
+  credentials: true,
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
